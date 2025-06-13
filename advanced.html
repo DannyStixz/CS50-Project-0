@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Search</title>
-        <style>
-            body {
-                background-color: #1E1E21;
-            }
-            .postition {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="position">
-            <a href="index.html">Google Search</a>
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Search</title>
+  <link rel="stylesheet" href="advanced.css">
+</head>
+<body>
+    <div class="Search-menus">
+            <a href="advanced.html">Advanced Search</a>
             <a href="image.html">Image Search</a>
             </form>
         </div>
-        <div>
-            <form action="https://www.google.com/search">
-                <input type="text" name="q">
-                <input type="submit" value="Google Search">
-            </form>
-        </div>
+  <header>
+    <h1 class="logo">Google</h1>
+    <h2 class="advanced">Advanced Search</h2>
+  </header>
 
-    </body>
+  <main>
+    <form class="search-form" action="https://www.google.com/search" method="GET">
+      <h3>Find pages with...</h3>
+
+      <div class="form-row">
+        <label for="all">all these words:</label>
+        <input type="text" id="all" name="as_q">
+      </div>
+
+      <div class="form-row">
+        <label for="exact">this exact word or phrase:</label>
+        <input type="text" id="exact" name="as_epq">
+      </div>
+
+      <div class="form-row">
+        <label for="any">any of these words:</label>
+        <input type="text" id="any" name="as_oq">
+      </div>
+
+      <div class="form-row">
+        <label for="none">none of these words:</label>
+        <input type="text" id="none" name="as_eq">
+      </div>
+
+
+      <div class="form-row">
+        <label for="low">numbers ranging from:</label>
+        <input type="text" id="low" name="as_nlo" class="small">
+        <span class="to-label">to</span>
+        <input type="text" id="high" name="as_nhi" class="small">
+    </div>
+    <div class="form-row">
+        <button type="submit">Advanced Search</button>
+    </div>
+    </form>
+  </main>
+</body>
 </html>
